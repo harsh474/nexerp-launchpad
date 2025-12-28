@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const API_URL = "http://localhost:8000";
 
 const benefits = [
   "Inventory Management",
@@ -10,6 +14,61 @@ const benefits = [
 ];
 
 export const Hero = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    industry: "",
+    requirements: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(`${API_URL}/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit lead");
+      }
+
+      toast({
+        title: "Request Submitted!",
+        description: "We'll contact you within 24 hours to schedule your free audit.",
+      });
+      setFormData({
+        name: "",
+        phone: "",
+        industry: "",
+        requirements: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="relative bg-hero overflow-hidden">
       {/* Background Pattern */}
@@ -72,11 +131,14 @@ export const Hero = () => {
                 Discover how ERPNext can transform your operations
               </p>
               
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
                     required
                   />
@@ -84,15 +146,20 @@ export const Hero = () => {
                 <div>
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
                     required
                   />
                 </div>
                 <div>
                   <select
+                    name="industry"
+                    value={formData.industry}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
-                    defaultValue=""
                     required
                   >
                     <option value="" disabled>Select Industry</option>
@@ -105,13 +172,16 @@ export const Hero = () => {
                 </div>
                 <div>
                   <textarea
+                    name="requirements"
                     placeholder="Brief Requirements"
                     rows={3}
+                    value={formData.requirements}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
                   />
                 </div>
-                <Button type="submit" variant="accent" size="lg" className="w-full">
-                  Request Free Audit
+                <Button type="submit" variant="accent" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Request Free Audit"}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </form>
