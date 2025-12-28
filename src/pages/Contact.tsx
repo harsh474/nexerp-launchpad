@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Twitter, MessageCircle, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const API_URL = "http://localhost:8000";
+
 const benefits = [
   "Free business process audit",
   "Customized solution recommendations",
@@ -13,6 +15,7 @@ const benefits = [
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,19 +24,44 @@ const Contact = () => {
     requirements: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Request Submitted!",
-      description: "We'll contact you within 24 hours to schedule your free audit.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      businessType: "",
-      requirements: ""
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(`${API_URL}/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit lead");
+      }
+
+      toast({
+        title: "Request Submitted!",
+        description: "We'll contact you within 24 hours to schedule your free audit.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        businessType: "",
+        requirements: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -153,8 +181,8 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="accent" size="lg" className="w-full">
-                  Book Free Audit Call
+                <Button type="submit" variant="accent" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Book Free Audit Call"}
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </form>
