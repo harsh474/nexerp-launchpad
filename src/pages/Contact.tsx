@@ -31,8 +31,9 @@ const Contact = () => {
 
     try {
       const payload = {
+      
         lead_name: formData.name,
-        company_name: formData.businessType,
+        // company_name: formData.businessType,
         email_id: formData.email,
         mobile_no: formData.phone,
         custom_requirenments: formData.requirements,
@@ -47,7 +48,7 @@ const Contact = () => {
         },
         body: JSON.stringify(payload),
       });
-
+      console
       if (!response.ok) {
         throw new Error("Failed to submit lead");
       }
