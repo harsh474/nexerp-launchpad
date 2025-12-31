@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Twitter, MessageCircle, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const API_URL = "http://20.193.138.77:8000/api/resource/Lead";
+const API_URL = "/erp/api/resource/Lead";
 const AUTH_TOKEN = "token e828cea3ee17fca:cffdfe59e708ecd";
 
 const benefits = [

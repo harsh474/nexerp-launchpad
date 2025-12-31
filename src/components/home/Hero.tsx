@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const API_URL = "http://20.193.138.77:8000/api/resource/Lead";
+const API_URL = "/erp/api/resource/Lead";
 const AUTH_TOKEN = "token e828cea3ee17fca:cffdfe59e708ecd";
 
 const benefits = [
@@ -38,11 +38,11 @@ export const Hero = () => {
     try {
       const payload = {
         lead_name: formData.name,
-        company_name: "",
-        email_id: "",
+
         mobile_no: formData.phone,
         custom_requirenments: formData.requirements,
-        industry: formData.industry
+        industry: formData.industry 
+        
       };
 
       const response = await fetch(API_URL, {
