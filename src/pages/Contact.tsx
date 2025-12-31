@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Twitter, MessageCircle, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "http://20.193.138.77:8000/api/resource/Lead";
+const AUTH_TOKEN = "token e828cea3ee17fca:cffdfe59e708ecd";
 
 const benefits = [
   "Free business process audit",
@@ -29,13 +30,22 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${API_URL}/leads`, {
+      const payload = {
+        lead_name: formData.name,
+        company_name: formData.businessType,
+        email_id: formData.email,
+        mobile_no: formData.phone,
+        custom_requirenments: formData.requirements,
+        industry: formData.businessType
+      };
+
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": AUTH_TOKEN,
         },
-        credentials: "include",
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
