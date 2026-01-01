@@ -7,6 +7,8 @@ import { useToast } from "@/hooks/use-toast";
 const API_URL = "https://erp.organicghee.store/api/resource/Lead";
 const AUTH_TOKEN = "token e828cea3ee17fca:cffdfe59e708ecd";
 
+
+
 const benefits = [
   "Inventory Management",
   "GST Compliance",
