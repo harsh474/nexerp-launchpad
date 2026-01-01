@@ -48,7 +48,7 @@ const Contact = () => {
         },
         body: JSON.stringify(payload),
       });
-      console
+      
       if (!response.ok) {
         throw new Error("Failed to submit lead");
       }
