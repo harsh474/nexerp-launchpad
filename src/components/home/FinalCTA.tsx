@@ -13,7 +13,7 @@ export const FinalCTA = () => {
             Ready to Optimize Your <span className="text-gradient">ERPNext</span>?
           </h2>
           <p className="text-primary-foreground/50 text-lg mb-10">
-            Let's transform your existing ERPNext into a high-performance operational system.
+            Let's transform your existing ERPNext into a scalable operational system.
           </p>
           <Link to="/contact">
             <Button variant="accent" size="xl">

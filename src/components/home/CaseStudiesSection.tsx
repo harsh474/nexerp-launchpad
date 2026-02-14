@@ -9,7 +9,7 @@ const caseStudies = [
     title: "Manufacturing Workflow Automation",
     problem: "A manufacturing firm was losing 15+ hours weekly on manual BOM updates, production order tracking, and quality inspection logging across multiple product lines.",
     solution: "Built custom workflow automations for BOM management, auto-generation of production orders from sales orders, and integrated quality inspection checklists with automated status transitions.",
-    result: "40% reduction in production planning time. Zero manual BOM errors. Real-time production visibility across all lines.",
+    result: "Reduced manual reporting workload significantly. Zero manual BOM errors. Real-time production visibility across all lines.",
   },
   {
     icon: Users,

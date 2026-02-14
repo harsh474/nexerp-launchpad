@@ -36,7 +36,7 @@ export const FounderSection = () => {
               </h2>
               
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Every project is architected and reviewed directly by the founder to ensure long-term stability and clean ERPNext customization. No handoffs to junior teams — you work directly with the person who designs the solution.
+                Led by an experienced ERPNext developer with deep expertise across core modules and advanced customization using Python, JavaScript, and ERPNext framework. We handle full-cycle customization — from requirement gathering to deployment and ongoing optimization.
               </p>
 
               <div className="space-y-3 mb-6">
