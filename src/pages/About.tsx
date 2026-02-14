@@ -1,51 +1,51 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Target, Eye, Heart, Users, Code, Headphones, ArrowRight, CheckCircle } from "lucide-react";
+import { Target, Eye, Shield, Globe, Code, Workflow, ArrowRight, CheckCircle } from "lucide-react";
 
 const values = [
   {
-    icon: Heart,
-    title: "Client First",
-    description: "Your success is our success. We go the extra mile to ensure your ERP implementation delivers real business value."
+    icon: Shield,
+    title: "Engineering Excellence",
+    description: "Every customization follows clean architecture principles — maintainable, scalable, and built to last through ERPNext upgrades."
   },
   {
     icon: Target,
-    title: "Result Oriented",
-    description: "We focus on measurable outcomes—faster billing, accurate inventory, on-time reports. Not just software installation."
+    title: "Result Driven",
+    description: "We focus on measurable outcomes — faster workflows, reduced manual effort, and operational efficiency gains you can quantify."
   },
   {
     icon: Eye,
-    title: "Transparency",
-    description: "No hidden costs, no surprises. Clear communication throughout the project lifecycle."
+    title: "Full Transparency",
+    description: "No hidden costs, no black-box development. You get clear timelines, milestone-based progress, and direct access to the engineer building your solution."
   }
 ];
 
-const team = [
-  {
-    icon: Users,
-    title: "Functional Consultants",
-    description: "Business analysts who understand your processes and translate them into ERPNext configurations."
-  },
+const expertise = [
   {
     icon: Code,
-    title: "Technical Developers",
-    description: "Python/Frappe experts who build custom modules, integrations, and automation scripts."
+    title: "Deep Technical Expertise",
+    description: "Advanced Python and JavaScript customization within the Frappe/ERPNext framework — not just configuration, but real engineering."
   },
   {
-    icon: Headphones,
-    title: "Support Engineers",
-    description: "Dedicated support staff for quick issue resolution and ongoing maintenance."
+    icon: Workflow,
+    title: "Process Engineering",
+    description: "We analyze and re-architect your workflows to eliminate bottlenecks, automate approvals, and enforce business logic at scale."
+  },
+  {
+    icon: Globe,
+    title: "Global Delivery",
+    description: "We serve clients across the US, UK, Middle East, and beyond — with async-friendly communication and timezone-aware project management."
   }
 ];
 
 const whyUs = [
-  "Deep domain knowledge in retail, wholesale, and education sectors",
-  "Local presence in Delhi NCR for on-site support",
-  "Competitive pricing designed for Indian SMEs",
-  "End-to-end services from implementation to AMC",
-  "Proven track record with satisfied clients",
-  "Quick turnaround and responsive communication"
+  "Specialized in advanced ERPNext customization — not generic ERP implementations",
+  "Founder-led engineering with direct client communication",
+  "Experience across manufacturing, distribution, HRMS, CRM & procurement",
+  "Clean, upgrade-safe code architecture",
+  "Structured milestone-based delivery with full transparency",
+  "Long-term technical partnership, not one-time projects"
 ];
 
 const About = () => {
@@ -56,13 +56,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-primary-foreground">
             <span className="inline-block px-4 py-1.5 bg-accent/20 rounded-full text-accent text-sm font-medium mb-6">
-              About Us
+              About NexERP
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">
-              Your Trusted ERPNext Partner in Delhi NCR
+              Your Specialized ERPNext Engineering Partner
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              We help Indian SMEs streamline their operations with powerful, affordable, and customized ERPNext solutions.
+              We help businesses across the US, UK, Middle East, and globally unlock the full potential of their ERPNext systems through advanced customization and workflow optimization.
             </p>
           </div>
         </div>
@@ -77,16 +77,16 @@ const About = () => {
                 Who We Are
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Simplifying ERP for Indian Businesses
+                A Technical Partner, Not a Generic Agency
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                NexERP Solutions is an ERPNext consulting and implementation agency based in Delhi NCR. We specialize in helping small and medium enterprises in retail, wholesale/distribution, and education sectors transform their operations.
+                NexERP is a founder-led ERPNext customization practice built for companies that have already implemented ERPNext but need deeper technical expertise to optimize, extend, and scale their systems.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                We understand that every business is unique. That's why we don't believe in one-size-fits-all solutions. Our approach is to understand your specific challenges, map your processes, and configure ERPNext to work exactly the way you need it.
+                We work with manufacturing firms, distribution companies, and operations-driven businesses across the US, UK, and Middle East — delivering advanced workflow automation, custom module development, and performance optimization.
               </p>
               <p className="text-lg text-muted-foreground">
-                From small retail shops to large distribution networks, from coaching institutes to established schools—we have the expertise to handle projects of all sizes and complexities.
+                Unlike large agencies, you work directly with the founder and lead engineer. Every solution is architected with clean code, clear documentation, and long-term maintainability in mind.
               </p>
             </div>
             <div className="bg-secondary rounded-2xl p-8 lg:p-12">
@@ -96,7 +96,7 @@ const About = () => {
                     <span className="text-accent-foreground font-display font-bold text-4xl">N</span>
                   </div>
                   <p className="font-display text-2xl font-bold text-foreground">NexERP</p>
-                  <p className="text-muted-foreground">Solutions</p>
+                  <p className="text-muted-foreground">Engineering Partner</p>
                 </div>
               </div>
             </div>
@@ -112,10 +112,10 @@ const About = () => {
               Our Mission
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Empowering SMEs with Enterprise-Grade Technology
+              Making ERPNext Work the Way Your Business Demands
             </h2>
             <p className="text-lg text-muted-foreground">
-              To make powerful ERP systems accessible and affordable for Indian SMEs. We believe that every business, regardless of size, deserves access to tools that can help them compete, grow, and thrive in the digital economy.
+              ERPNext is powerful out of the box — but every business has unique processes that require custom engineering. Our mission is to bridge that gap with expert-level customization, automation, and ongoing optimization that transforms ERPNext from a standard tool into your competitive advantage.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-card rounded-xl p-8 border border-border hover:border-accent transition-colors">
+              <div key={value.title} className="bg-card rounded-xl p-8 border border-border hover:border-accent/30 transition-colors">
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                   <value.icon className="w-6 h-6 text-accent" />
                 </div>
@@ -151,32 +151,32 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Structure */}
+      {/* Expertise */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
-              Our Team
+              Our Expertise
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Experts at Your Service
+              What Sets Us Apart
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A balanced team of functional consultants, developers, and support engineers to handle every aspect of your ERP journey.
+              Specialized technical depth combined with structured project delivery and global reach.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div key={member.title} className="bg-card rounded-xl p-8 text-center">
-                <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mx-auto mb-4">
-                  <member.icon className="w-8 h-8 text-accent-foreground" />
+            {expertise.map((item) => (
+              <div key={item.title} className="bg-card rounded-xl p-8 text-center border border-border">
+                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground mb-2">
-                  {member.title}
+                  {item.title}
                 </h3>
                 <p className="text-muted-foreground">
-                  {member.description}
+                  {item.description}
                 </p>
               </div>
             ))}
@@ -193,7 +193,7 @@ const About = () => {
                 Why NexERP
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Why Choose Us as Your ERP Partner?
+                Why Companies Choose Us
               </h2>
               <ul className="space-y-4">
                 {whyUs.map((item) => (
@@ -206,14 +206,14 @@ const About = () => {
             </div>
             <div className="bg-accent rounded-2xl p-8 lg:p-12 text-accent-foreground">
               <h3 className="font-display text-2xl font-bold mb-4">
-                Ready to Get Started?
+                Ready to Optimize Your ERPNext?
               </h3>
               <p className="text-accent-foreground/80 mb-6">
-                Book a free audit call to discuss your requirements. We'll analyze your current systems and recommend the best approach for your business.
+                Book a strategy call to discuss your ERPNext challenges. We'll assess your current setup and recommend a clear path forward.
               </p>
               <Link to="/contact">
-                <Button variant="default" size="lg" className="bg-primary text-primary-foreground hover:bg-navy-light">
-                  Book Free Audit
+                <Button variant="default" size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Book a Strategy Call
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
