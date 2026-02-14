@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { name: "Home", path: "/" },
   { name: "Services", path: "/services" },
   { name: "Pricing", path: "/pricing" },
-  { name: "AMC Plans", path: "/amc" },
-  { name: "Industries", path: "/industries" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -18,15 +15,15 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-accent-foreground font-display font-bold text-xl">N</span>
+            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+              <span className="text-accent-foreground font-display font-bold text-base">N</span>
             </div>
-            <span className="font-display font-bold text-xl text-foreground">
+            <span className="font-display font-bold text-lg text-foreground">
               Nex<span className="text-accent">ERP</span>
             </span>
           </Link>
@@ -39,8 +36,8 @@ export const Navbar = () => {
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   location.pathname === link.path
-                    ? "text-accent bg-accent/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    ? "text-accent"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {link.name}
@@ -49,14 +46,10 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:9301592158" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4" />
-              <span>9301592158</span>
-            </a>
+          <div className="hidden lg:flex items-center">
             <Link to="/contact">
               <Button variant="accent" size="default">
-                Book Free Audit
+                Book a Strategy Call
               </Button>
             </Link>
           </div>
@@ -67,7 +60,7 @@ export const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
@@ -80,19 +73,19 @@ export const Navbar = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                     location.pathname === link.path
-                      ? "text-accent bg-accent/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                      ? "text-accent bg-accent/5"
+                      : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-4 mt-2 border-t border-border">
+              <div className="pt-3 mt-2 border-t border-border">
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   <Button variant="accent" className="w-full">
-                    Book Free Audit
+                    Book a Strategy Call
                   </Button>
                 </Link>
               </div>
