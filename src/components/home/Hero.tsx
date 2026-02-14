@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, Code, Workflow, Shield } from "lucide-react";
 
 const credibility = [
   "Deep expertise in Buying, Selling, Manufacturing, HRMS & CRM",
-  "Advanced Python & JavaScript customization",
+  "Advanced Python & JavaScript customizations",
   "Clean architecture & long-term support",
 ];
 
@@ -29,13 +29,13 @@ export const Hero = () => {
           </div>
           
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-6 leading-[1.1] animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Advanced ERPNext{" "}
-            <span className="text-gradient">Customization</span> &{" "}
-            Workflow Optimization
+            ERPNext Customization &{" "}
+            <span className="text-gradient">Workflow Optimization</span>{" "}
+            Experts
           </h1>
           
           <p className="text-lg md:text-xl text-primary-foreground/60 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            We help businesses already using ERPNext streamline complex operations, automate workflows, and build scalable custom solutions tailored to their processes.
+            We help businesses already using ERPNext streamline complex workflows, automate operations, and build scalable custom solutions tailored to their processes.
           </p>
 
           {/* CTAs */}

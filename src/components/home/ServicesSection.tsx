@@ -6,28 +6,28 @@ const services = [
     title: "Workflow Optimization",
     items: [
       "Custom approval chains",
-      "Automated document transitions",
-      "Role-based business logic",
-      "Multi-step operational workflows",
+      "Automated document flows",
+      "Role-based access logic",
+      "Business rule scripting",
     ],
   },
   {
     icon: Code,
-    title: "Advanced Custom Development",
+    title: "Custom Development",
     items: [
       "Custom DocTypes & fields",
       "Python server scripts",
       "JavaScript client scripts",
-      "Custom ERPNext app development",
+      "Custom ERPNext apps",
     ],
   },
   {
     icon: Settings,
     title: "Module Enhancements",
     items: [
-      "Buying & Selling automation",
-      "Manufacturing workflow improvements",
-      "HRMS process extensions",
+      "Buying & Selling workflow extensions",
+      "Manufacturing automation",
+      "HRMS process optimization",
       "CRM pipeline customization",
     ],
   },
@@ -37,16 +37,16 @@ const services = [
     items: [
       "REST API integrations",
       "Webhooks",
-      "External platform synchronization",
       "Payment gateway integration",
+      "External system sync",
     ],
   },
   {
     icon: BarChart3,
     title: "Reporting & Performance",
     items: [
-      "Custom KPI dashboards",
-      "SQL-based reporting",
+      "Custom dashboards",
+      "SQL-based reports",
       "Database indexing",
       "Background job optimization",
     ],
@@ -62,8 +62,8 @@ export const ServicesSection = () => {
             What We Do
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            ERPNext Customization &{" "}
-            <span className="text-gradient">Optimization Services</span>
+            Advanced ERPNext{" "}
+            <span className="text-gradient">Customization Services</span>
           </h2>
         </div>
 

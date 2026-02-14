@@ -6,7 +6,7 @@ import { ProcessSection } from "@/components/home/ProcessSection";
 import { CaseStudiesSection } from "@/components/home/CaseStudiesSection";
 import { FounderSection } from "@/components/home/FounderSection";
 import { SupportSection } from "@/components/home/SupportSection";
-import { PricingPreview } from "@/components/home/PricingPreview";
+
 import { FinalCTA } from "@/components/home/FinalCTA";
 
 const Index = () => {
@@ -19,7 +19,7 @@ const Index = () => {
       <CaseStudiesSection />
       <FounderSection />
       <SupportSection />
-      <PricingPreview />
+      
       <FinalCTA />
     </Layout>
   );

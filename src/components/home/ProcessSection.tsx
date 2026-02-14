@@ -6,7 +6,7 @@ const steps = [
   },
   {
     number: "02",
-    title: "Workflow & Architecture Blueprint",
+    title: "Workflow Analysis & Customization Plan",
     description: "Detailed technical plan with clear milestones and deliverables.",
   },
   {
@@ -37,7 +37,7 @@ export const ProcessSection = () => {
             Our Process
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-            Our Optimization <span className="text-gradient">Framework</span>
+            How We <span className="text-gradient">Work</span>
           </h2>
         </div>
 
@@ -68,7 +68,7 @@ export const ProcessSection = () => {
         </div>
 
         <p className="text-center text-primary-foreground/40 text-lg mt-12 italic">
-          We don't replace your ERPNext — we engineer it to perform better.
+          We don't replace your ERPNext — we enhance it.
         </p>
       </div>
     </section>

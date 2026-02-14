@@ -1,11 +1,10 @@
 import { AlertTriangle, Clock, BarChart3, Puzzle, Gauge, TrendingUp } from "lucide-react";
 
 const problems = [
-  { icon: Clock, text: "Manual processes slowing operations" },
-  { icon: AlertTriangle, text: "Workflow bottlenecks" },
-  { icon: BarChart3, text: "Reporting gaps" },
+  { icon: Clock, text: "Inefficient manual workflows" },
   { icon: Puzzle, text: "Customization limitations" },
-  { icon: Gauge, text: "Performance issues" },
+  { icon: Gauge, text: "Performance bottlenecks" },
+  { icon: BarChart3, text: "Reporting gaps" },
   { icon: TrendingUp, text: "Growing operational complexity" },
 ];
 
@@ -18,8 +17,8 @@ export const ProblemSection = () => {
             Common Challenges
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            ERPNext Installed — But Not{" "}
-            <span className="text-gradient">Fully Optimized</span>?
+            Already Using ERPNext?{" "}
+            <span className="text-gradient">Let's Make It Better.</span>
           </h2>
         </div>
 
@@ -38,7 +37,7 @@ export const ProblemSection = () => {
         </div>
 
         <p className="text-center text-muted-foreground text-lg max-w-xl mx-auto">
-          We specialize in <span className="text-foreground font-semibold">enhancing and extending ERPNext</span> beyond standard functionality.
+          We specialize in <span className="text-foreground font-semibold">optimizing and extending ERPNext</span> beyond standard modules.
         </p>
       </div>
     </section>
