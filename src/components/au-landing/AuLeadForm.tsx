@@ -5,8 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
-
+// const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzRUt5G-vHqh3uk8QqMmI_gBBiNLmM766Mru7VsSNbQSxQzxXIaCH812zgN_1XHyMKA/exec";
 export const AuLeadForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
