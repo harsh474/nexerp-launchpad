@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_URL";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
 
 export const AuLeadForm = () => {
   const { toast } = useToast();
