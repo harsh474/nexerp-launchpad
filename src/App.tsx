@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import AuManufacturingErp from "./pages/AuManufacturingErp";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/au-manufacturing-erp" element={<AuManufacturingErp />} />
           <Route path="/services" element={<Services />} />
           <Route path="/project-journey" element={<ProjectJourney />} />
           <Route path="/amc" element={<AMC />} />
