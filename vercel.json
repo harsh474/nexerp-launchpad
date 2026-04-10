@@ -1,5 +1,17 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/au-manufacturing-erp",
+      "destination": "/au-manufacturing-erp/index.html"
+    },
+    {
+      "source": "/au-manufacturing-erp/(.*)",
+      "destination": "/au-manufacturing-erp/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
+  
