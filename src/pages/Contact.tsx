@@ -149,17 +149,17 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4">
-                <a href="mailto:harshrajput1101@gmail.com" className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-accent/30 transition-colors">
+                <a href="mailto:info@nexerp.online" className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-accent/30 transition-colors">
                   <Mail className="w-5 h-5 text-accent" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">harshrajput1101@gmail.com</p>
+                    <p className="text-sm font-medium text-foreground">info@nexerp.online</p>
                     <p className="text-xs text-muted-foreground">We reply within 24 hours</p>
                   </div>
                 </a>
                 <a href="https://x.com/HarshRajput7301" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-card rounded-xl border border-border hover:border-accent/30 transition-colors">
                   <Twitter className="w-5 h-5 text-accent" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">@HarshRajput7301</p>
+                    {/* <p className="text-sm font-medium text-foreground">@HarshRajput7301</p> */}
                     <p className="text-xs text-muted-foreground">Follow for updates</p>
                   </div>
                 </a>

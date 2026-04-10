@@ -35,7 +35,7 @@ export const Footer = () => {
               Founder-led ERPNext customization and workflow optimization for manufacturing, distribution, and operations-driven businesses.
             </p>
             <div className="flex items-center gap-4">
-              <a href="mailto:harshrajput1101@gmail.com" className="text-primary-foreground/40 hover:text-accent transition-colors">
+              <a href="mailto:info@nexerp.online" className="text-primary-foreground/40 hover:text-accent transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
               <a href="https://x.com/HarshRajput7301" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/40 hover:text-accent transition-colors">
