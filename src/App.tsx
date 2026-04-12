@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AuManufacturingErp from "./pages/AuManufacturingErp";
+import ErpAlternatives from "./pages/ErpAlternatives";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/au-manufacturing-erp" element={<AuManufacturingErp />} />
+          <Route path="/erp-alternatives" element={<ErpAlternatives />} />
           <Route path="/services" element={<Services />} />
           <Route path="/project-journey" element={<ProjectJourney />} />
           <Route path="/amc" element={<AMC />} />
