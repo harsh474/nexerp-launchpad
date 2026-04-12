@@ -14,6 +14,7 @@ import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import AuManufacturingErp from "./pages/AuManufacturingErp";
 import ErpAlternatives from "./pages/ErpAlternatives";
+import ErpForSme from "./pages/ErpForSme";
 
 const queryClient = new QueryClient();
 
