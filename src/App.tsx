@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/au-manufacturing-erp" element={<AuManufacturingErp />} />
           <Route path="/erp-alternatives" element={<ErpAlternatives />} />
+          <Route path="/erp-for-sme" element={<ErpForSme />} />
           <Route path="/services" element={<Services />} />
           <Route path="/project-journey" element={<ProjectJourney />} />
           <Route path="/amc" element={<AMC />} />
