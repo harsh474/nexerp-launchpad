@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Twitter, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const API_URL = "https://erp.organicghee.store/api/resource/Lead";
-const AUTH_TOKEN = "token e828cea3ee17fca:cffdfe59e708ecd";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
 
 const benefits = [
   "Comprehensive system audit",
