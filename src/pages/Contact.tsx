@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Mail, Twitter, ArrowRight, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
+// const GOO/GLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyaEbQp_JO4b1lRyrOqHcaOVBMdvLusfUYfXk1HeeoK2hzhdkaxQs76UzsHO_jYbuAQ/exec";
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzRUt5G-vHqh3uk8QqMmI_gBBiNLmM766Mru7VsSNbQSxQzxXIaCH812zgN_1XHyMKA/exec";
 
 const benefits = [
   "Comprehensive system audit",
