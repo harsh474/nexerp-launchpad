@@ -29,24 +29,20 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const payload = {
-        lead_name: formData.name,
-        email_id: formData.email,
-        mobile_no: formData.phone,
-        custom_requirenments: formData.requirements,
-        industry: formData.businessType
-      };
-
-      const response = await fetch(API_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": AUTH_TOKEN,
-        },
-        body: JSON.stringify(payload),
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          description: formData.requirements,
+          industry: formData.businessType,
+          source: "Contact Page",
+          timestamp: new Date().toISOString(),
+        }),
       });
-      
-      if (!response.ok) throw new Error("Failed to submit");
 
       toast({
         title: "Request Submitted!",
