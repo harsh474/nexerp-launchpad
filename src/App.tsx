@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import AuManufacturingErp from "./pages/AuManufacturingErp";
 import ErpAlternatives from "./pages/ErpAlternatives";
 import ErpForSme from "./pages/ErpForSme";
+import RealEstateCrm from "./pages/RealEstateCrm";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/au-manufacturing-erp" element={<AuManufacturingErp />} />
           <Route path="/erp-alternatives" element={<ErpAlternatives />} />
           <Route path="/erp-for-sme" element={<ErpForSme />} />
+          <Route path="/real-estate-crm" element={<RealEstateCrm />} />
           <Route path="/services" element={<Services />} />
           <Route path="/project-journey" element={<ProjectJourney />} />
           <Route path="/amc" element={<AMC />} />
