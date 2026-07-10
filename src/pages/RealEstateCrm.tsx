@@ -1,9 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Phone, Bot, Sparkles, GraduationCap, Database, ArrowRight, CheckCircle } from "lucide-react";
+import { Shield, Phone, Bot, Sparkles, GraduationCap, Database, ArrowRight, CheckCircle, Brain, MessageSquare, Zap, TrendingUp, Mic, Target } from "lucide-react";
 import { LeadForm } from "@/components/landing/LeadForm";
 import { CalendlyEmbed } from "@/components/landing/CalendlyEmbed";
 
 const CALENDLY_URL = "https://calendly.com/nexerp-info/30min";
+
+const aiCapabilities = [
+  { icon: Mic, title: "AI Voice Agent", desc: "Human-like AI calls every new lead within seconds — qualifies budget, location, and intent before your team even sees it." },
+  { icon: Brain, title: "Smart Lead Scoring", desc: "AI ranks leads by conversion probability using behavior, source, and conversation signals — so reps chase the hottest ones first." },
+  { icon: MessageSquare, title: "AI WhatsApp & SMS Follow-ups", desc: "Personalized, context-aware nurture sequences that reply to leads 24/7 in natural language." },
+  { icon: Target, title: "Intent Detection", desc: "Real-time AI analysis of every call and chat to flag ready-to-buy prospects instantly." },
+  { icon: TrendingUp, title: "Predictive Insights", desc: "AI forecasts which projects, sources, and reps will hit targets — with recommended next actions." },
+  { icon: Zap, title: "Auto Call Summaries", desc: "Every call transcribed, summarized, and logged automatically. No manual data entry, ever." },
+];
 
 const differentiators = [
   { icon: Shield, title: "Encrypted Lead Security", desc: "Masked contact details protect your database from being copied or stolen by sales reps." },
@@ -22,22 +31,24 @@ const RealEstateCrm = () => {
   return (
     <div className="min-h-screen bg-background pb-20 md:pb-0">
       {/* Hero */}
-      <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-16 md:py-24">
+      <section className="bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--accent)/0.15),transparent_50%)]" />
+        <div className="container mx-auto px-4 py-16 md:py-24 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-accent/20 text-accent mb-6">
-              AI-Powered CRM for Real Estate
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium bg-accent/20 text-accent mb-6 border border-accent/30">
+              <Sparkles className="w-3.5 h-3.5" /> Powered by AI Voice Agents · Made for Indian Real Estate
             </span>
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              AI-Powered CRM Built for Real Estate — <span className="text-accent">Never Lose a Lead Again</span>
+              The First <span className="text-accent">AI-Powered CRM</span> Built for Real Estate — Never Lose a Lead Again
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-              Encrypted lead security, built-in calling, and AI agents that qualify and convert leads automatically.
+              AI voice agents call, qualify, and follow up on every lead within seconds. Encrypted lead security, built-in calling, and predictive insights that turn inquiries into site visits — automatically.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="accent" size="lg" onClick={() => scrollTo("demo")} className="w-full sm:w-auto">
                 Book a Free Demo <ArrowRight className="w-4 h-4" />
               </Button>
+
               <Button variant="outline" size="lg" onClick={() => scrollTo("lead-form")}
                 className="w-full sm:w-auto bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 Get a Callback
