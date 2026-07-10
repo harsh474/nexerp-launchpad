@@ -127,9 +127,9 @@ const RealEstateCrm = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Everything Your Sales Team Needs — In One Platform
+              Plus Everything a Modern Sales Team Expects
             </h2>
-            <p className="text-muted-foreground">Purpose-built for how Indian real estate teams actually work.</p>
+            <p className="text-muted-foreground">Enterprise-grade security and workflow, purpose-built for Indian real estate.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {differentiators.map((d) => (
