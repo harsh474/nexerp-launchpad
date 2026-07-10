@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import AuManufacturingErp from "./pages/AuManufacturingErp";
 import ErpAlternatives from "./pages/ErpAlternatives";
 import ErpForSme from "./pages/ErpForSme";
+import RealEstateCrm from "./pages/RealEstateCrm";
 
 const queryClient = new QueryClient();
 
