@@ -46,6 +46,7 @@ const Contact = () => {
         }),
       });
 
+      if (typeof window !== "undefined" && (window as any).fbq) (window as any).fbq("track", "Lead");
       toast({
         title: "Request Submitted!",
         description: "We'll be in touch within 24 hours to schedule your strategy call.",

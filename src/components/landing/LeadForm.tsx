@@ -85,6 +85,7 @@ export const LeadForm = ({
         }),
       });
       setIsSubmitted(true);
+      if (typeof window !== "undefined" && (window as any).fbq) (window as any).fbq("track", "Lead");
       toast({ title: "Thank you!", description: "We'll get back to you within 24 hours." });
     } catch {
       toast({ title: "Something went wrong", description: "Please try again.", variant: "destructive" });
