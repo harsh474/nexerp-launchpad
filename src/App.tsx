@@ -16,6 +16,7 @@ import AuManufacturingErp from "./pages/AuManufacturingErp";
 import ErpAlternatives from "./pages/ErpAlternatives";
 import ErpForSme from "./pages/ErpForSme";
 import RealEstateCrm from "./pages/RealEstateCrm";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
