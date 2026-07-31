@@ -13,6 +13,7 @@ const footerLinks = {
     { name: "Case Studies", path: "/case-studies" },
     { name: "Project Journey", path: "/project-journey" },
     { name: "Contact", path: "/contact" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
   ],
 };
 
